@@ -1,0 +1,19 @@
+<div class="header">
+  <h2 class="header__title">Super jokes</h2>
+</div>
+
+<div class="main">
+  <div class="nav">
+    <ul class="pills">
+      <li *ngFor="let route of routes" (click)="navigateTo(route.path)">
+        {{route.viewValue}}
+      </li>
+    </ul>
+
+    <button class="button-12 homebutton" (click)="navigateToDashboard()">Домой</button>
+
+  </div>
+  <div class="content">
+   <router-outlet></router-outlet>
+  </div>
+</div>
